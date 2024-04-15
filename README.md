@@ -14,13 +14,13 @@ We make the first attempt towards **unsupervised preference alignment** in Large
 
 
 ## Contents
-- [Getting Started](#Started)
+- [Getting Started](#Getting-Started)
 - [Model Zoo](https://huggingface.co/kevinke/)
 - [DPO Data](https://huggingface.co/kevinke/data/)
 
 
 
-# Getting Started
+# Getting-Started
 ```
 conda create -n seva python==3.9
 ```
