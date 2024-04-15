@@ -1,6 +1,9 @@
 # SeVa
 This is the official code of paper **Self-Supervised Visual Preference Alignment**
 
+![method](seva/utils/method.png)
+
+
 ## Getting Started
 ```
 conda create -n seva python==3.9
