@@ -4,6 +4,10 @@ This is the official code of paper **Self-Supervised Visual Preference Alignment
 ![method](seva/utils/method.png)
 
 
+[Paper](now uploading) 
+[Data](https://huggingface.co/kevinke/data/)
+[Models](https://huggingface.co/kevinke/)
+
 ## Getting Started
 ```
 conda create -n seva python==3.9
