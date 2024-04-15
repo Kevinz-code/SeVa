@@ -1,8 +1,8 @@
 import json,random
 
 
-aug_name = "diffusion_step500"
-# aug_name = "diffusion_step800"
+# aug_name = "diffusion_step500"
+aug_name = "diffusion_step800"
 
 choosen_file = "../step2/textvqa_answer_file_8k_base.jsonl"
 

@@ -1,7 +1,7 @@
 import json
 
 
-sft_root = "/data/hypertext/zhuk/llava/LLaVA/data/LLaVA-Instruct-150K/llava_v1_5_mix665k.json"
+sft_root = "llava_v1_5_mix665k.json"
 sft_file = json.load(open(sft_root, "r"))
 
 
