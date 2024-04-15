@@ -79,40 +79,7 @@ if __name__ == "__main__":
     ans_file_list = ['{}/pope_random.jsonl'.format(args.path),
                      '{}/pope_popular.jsonl'.format(args.path),
                      '{}/pope_adv.jsonl'.format(args.path)]
-    label_file_list = ['/data/hypertext/zhuk/HA-DPO/ha_dpo/data/POPE/output/coco/coco_pope_adversarial.json',
-                  '/data/hypertext/zhuk/HA-DPO/ha_dpo/data/POPE/output/coco/coco_pope_adversarial.json',
-                  '/data/hypertext/zhuk/HA-DPO/ha_dpo/data/POPE/output/coco/coco_pope_adversarial.json']
+    label_file_list = ['POPE/output/coco/coco_pope_adversarial.json',
+                  'POPE/output/coco/coco_pope_adversarial.json',
+                  'POPE/output/coco/coco_pope_adversarial.json']
     tag_list = ['random', 'popular', 'adversarial']
-
-    # 创建一个新的Workbook对象
-    wb = Workbook()
-
-    # 选择活动的工作表
-    ws = wb.active
-
-    # 在工作表中写入表头
-    ws['A1'] = 'Tag'
-    ws['B1'] = 'Accuracy'
-    ws['C1'] = 'Precision'
-    ws['D1'] = 'F1 Score'
-    ws['E1'] = 'Yes Ratio'
-
-
-
-    for i in range(3):
-        print(tag_list[i])
-        print("------------------------------------------")
-        acc, precision, f1, yes_ratio = eval_all(ans_file_list[i], label_file_list[i])
-        print("------------------------------------------")
-        print()
-
-        # 将数据写入Excel表格
-        row = i + 2  # 行数从第2行开始
-        ws.cell(row=row, column=1, value=tag_list[i])
-        ws.cell(row=row, column=2, value=acc)
-        ws.cell(row=row, column=3, value=precision)
-        ws.cell(row=row, column=4, value=f1)
-        ws.cell(row=row, column=5, value=yes_ratio)
-
-    # 保存工作簿到文件
-    wb.save('{}/evaluation_results.xlsx'.format(args.path))
