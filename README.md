@@ -11,7 +11,16 @@ We make the first attempt towards **unsupervised preference alignment** in Large
 
 [Models](https://huggingface.co/kevinke/)
 
-## Getting Started
+
+
+## Contents
+- [Getting Started](#getting started)
+- [Model Zoo](https://huggingface.co/kevinke/)
+- [DPO Data](https://huggingface.co/kevinke/data/)
+
+
+
+# Getting Started
 ```
 conda create -n seva python==3.9
 ```
