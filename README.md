@@ -14,10 +14,10 @@ We make the first attempt towards **unsupervised preference alignment** in Large
 
 
 ## Contents
-- [Getting Started](#Getting-Started)
+- [Install](#Install)
 - [Model Zoo](https://huggingface.co/kevinke/)
 - [DPO Data](https://huggingface.co/kevinke/data/)
-
+- [Training](#Training)
 
 
 # Getting-Started
