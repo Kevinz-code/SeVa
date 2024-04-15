@@ -14,8 +14,7 @@ We make the first attempt towards **unsupervised preference alignment** in Large
 
 
 ## Contents
-- [Getting Started](#Getting Started
-  )
+- [Getting Started](#Started)
 - [Model Zoo](https://huggingface.co/kevinke/)
 - [DPO Data](https://huggingface.co/kevinke/data/)
 
