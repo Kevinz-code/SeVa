@@ -16,9 +16,8 @@ We make the first attempt towards **unsupervised preference alignment** in Large
 conda create -n seva python==3.9
 ```
 Then in `seva' environment, install dependencies:
-pip install torch==2.0.1 torchvision==0.15.2
-
 ```
+pip install torch==2.0.1 torchvision==0.15.2
 pip install -e .
 ```
 
