@@ -16,6 +16,7 @@ We make the first attempt towards **unsupervised preference alignment** in Large
 ## Contents
 - [Install](#Install)
 - [Model Zoo](https://huggingface.co/kevinke/)
+- [Data Construction][data/README.md]
 - [DPO Data](https://huggingface.co/kevinke/data/)
 - [Training](#Training)
 
