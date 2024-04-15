@@ -2,6 +2,7 @@
 This is the official code of paper **Self-Supervised Visual Preference Alignment**.
 
 We make the first attempt towards **unsupervised preference alignment** in Large Vision-Language Models, and discuss its relations **contrastive learning**.
+
 ![method](seva/utils/method.png)
 
 [Paper](now uploading) 
