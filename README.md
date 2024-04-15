@@ -31,7 +31,7 @@ pip install torch==2.0.1 torchvision==0.15.2
 pip install -e .
 ```
 
-# MODEL_ZOO
+## MODEL_ZOO
 | Version | Augmentation | LLM | Schedule | Checkpoint | LLaVA-Bench | MM-Vet | MMB | MMB-CN | POPE| SEED | SHR (↓) | SQA | GQA |
 |----------|------------|------|----------|------------|---|---|---|---|---|---|---|---|---|
 | SeVa-7B | Diffusion500 | Vicuna-7B | lora_ft | [kevinke/seva-7b-diffu500](https://huggingface.co/kevinke/seva-7b-diffu500) | 70.7 | 35.5 | 64.7 | 58.8 | 86.8 | 65.8  | 32.7 | 67.4 | 61.1 |
