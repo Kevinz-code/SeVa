@@ -21,7 +21,7 @@ We make the first attempt towards **unsupervised preference alignment** in Large
 - [Training](#Training)
 
 
-# Getting-Started
+## Install
 ```
 conda create -n seva python==3.9
 ```
@@ -31,7 +31,7 @@ pip install torch==2.0.1 torchvision==0.15.2
 pip install -e .
 ```
 
-## MODEL_ZOO
+# MODEL_ZOO
 | Version | Augmentation | LLM | Schedule | Checkpoint | LLaVA-Bench | MM-Vet | MMB | MMB-CN | POPE| SEED | SHR (↓) | SQA | GQA |
 |----------|------------|------|----------|------------|---|---|---|---|---|---|---|---|---|
 | SeVa-7B | Diffusion500 | Vicuna-7B | lora_ft | [kevinke/seva-7b-diffu500](https://huggingface.co/kevinke/seva-7b-diffu500) | 70.7 | 35.5 | 64.7 | 58.8 | 86.8 | 65.8  | 32.7 | 67.4 | 61.1 |
@@ -45,3 +45,7 @@ pip install -e .
 sh /data/hypertext/zhuk/github/upload/run/llava1.5_lora_our_ocrlv_8kfilter_diffu500_textvga_8kfilter_diffu500_r1024_a2048.sh
 sh /data/hypertext/zhuk/github/upload/run/llava1.5_lora_our_ocrlv_8kfilter4k_diffu800_textvga_8kfilter6k_diffu800_r1024_a2048.sh
 ```
+
+
+## Evaluation
+Refer to [LLaVa-1.5](https://github.com/haotian-liu/LLaVA/blob/main/docs/Evaluation.md).
