@@ -31,6 +31,7 @@ pip install torch==2.0.1 torchvision==0.15.2
 pip install -e .
 ```
 
+
 # Model
 | Version | Augmentation | LLM | Schedule | Checkpoint | LLaVA-Bench | MM-Vet | MMB | MMB-CN | POPE| SEED | SHR (↓) | SQA | GQA |
 |----------|------------|------|----------|------------|---|---|---|---|---|---|---|---|---|
