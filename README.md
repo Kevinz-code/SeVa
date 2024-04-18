@@ -38,11 +38,16 @@ pip install -e .
 
 
 ## Training
-The following command will conduct the training pipeline in 7b setting:
+The following command will conduct the training pipeline in 7b setting.
 
+For running with DPO data sourced from Diffusion noise (*step=500*):
 ```
-sh /data/hypertext/zhuk/github/upload/run/llava1.5_lora_our_ocrlv_8kfilter_diffu500_textvga_8kfilter_diffu500_r1024_a2048.sh
-sh /data/hypertext/zhuk/github/upload/run/llava1.5_lora_our_ocrlv_8kfilter4k_diffu800_textvga_8kfilter6k_diffu800_r1024_a2048.sh
+sh run/llava1.5_lora_our_ocr8k_diffu500_text8k_diffu500.sh
+```
+
+For running with DPO data sourced from Diffusion noise (*step=800*):
+```
+sh run/llava1.5_lora_our_ocr8k_diffu800_text8k_diffu800.sh
 ```
 
 
