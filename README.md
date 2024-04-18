@@ -1,7 +1,7 @@
 # :rabbit2:	Self-Supervised Visual Preference Alignment
 We make the first attempt towards **unsupervised preference alignment** in Large Vision-Language Models.
 
-*The whole pipeline without any GPT-4 or humman annotated labels*. [Paper](https://arxiv.org/abs/2404.10501) [Data](https://huggingface.co/kevinke/data/) [Models](https://huggingface.co/kevinke/)
+*The whole pipeline without any GPT-4 or humman annotated labels*. [Paper](https://arxiv.org/abs/2404.10501)
 
 
 ![method](seva/utils/method.png) 
@@ -28,7 +28,7 @@ pip install -e .
 ```
 
 
-# Model
+## Model
 | Version | Augmentation | LLM | Schedule | Checkpoint | LLaVA-Bench | MM-Vet | MMB | MMB-CN | POPE| SEED | SHR (↓) | SQA | GQA |
 |----------|------------|------|----------|------------|---|---|---|---|---|---|---|---|---|
 | SeVa-7B | Diffusion500 | Vicuna-7B | lora_ft | [kevinke/seva-7b-diffu500](https://huggingface.co/kevinke/seva-7b-diffu500) | 70.7 | 35.5 | 64.7 | 58.8 | 86.8 | 65.8  | 32.7 | 67.4 | 61.1 |
@@ -38,6 +38,8 @@ pip install -e .
 
 
 ## Training
+The following command will conduct the training pipeline in 7b setting:
+
 ```
 sh /data/hypertext/zhuk/github/upload/run/llava1.5_lora_our_ocrlv_8kfilter_diffu500_textvga_8kfilter_diffu500_r1024_a2048.sh
 sh /data/hypertext/zhuk/github/upload/run/llava1.5_lora_our_ocrlv_8kfilter4k_diffu800_textvga_8kfilter6k_diffu800_r1024_a2048.sh
