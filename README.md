@@ -1,11 +1,11 @@
 # :rabbit2:	Self-Supervised Visual Preference Alignment
 We make the first attempt towards **unsupervised preference alignment** in Large Vision-Language Models.
 
-*The whole pipeline without any GPT-4 or humman annotated labels*.
+*The whole pipeline without any GPT-4 or humman annotated labels*. [Paper](https://arxiv.org/abs/2404.10501) [Data](https://huggingface.co/kevinke/data/) [Models](https://huggingface.co/kevinke/)
+
 
 ![method](seva/utils/method.png) 
 
-[Paper](https://arxiv.org/abs/2404.10501) [Data](https://huggingface.co/kevinke/data/)[Models](https://huggingface.co/kevinke/)
 
 
 
