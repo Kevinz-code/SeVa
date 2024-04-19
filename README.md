@@ -23,6 +23,7 @@ conda create -n seva python==3.9
 ```
 Then in `seva' environment, install dependencies:
 ```
+conda activate seva
 pip install torch==2.0.1 torchvision==0.15.2
 pip install -e .
 ```
@@ -53,3 +54,21 @@ sh run/llava1.5_lora_our_ocr8k_diffu800_text8k_diffu800.sh
 
 ## Evaluation
 Refer to [LLaVa-1.5](https://github.com/haotian-liu/LLaVA/blob/main/docs/Evaluation.md).
+
+## Citation
+If you find our paper or codebase useful, please consider cite
+```
+@misc{zhu2024selfsupervised,
+    title={Self-Supervised Visual Preference Alignment},
+    author={Ke Zhu and Liang Zhao and Zheng Ge and Xiangyu Zhang},
+    year={2024},
+    eprint={2404.10501},
+    archivePrefix={arXiv},
+    primaryClass={cs.CV}
+}
+```
+
+
+## Acknowledgement
+This repo is based on [HA-DPO](https://github.com/opendatalab/HA-DPO/) and [LLaVA](https://github.com/haotian-liu/LLaVA). We thank their efforts in building their codebase. 
+
