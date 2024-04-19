@@ -19,11 +19,14 @@ We make the first attempt towards **unsupervised preference alignment** in Large
 
 
 ## Install
+First, clone this repo by:
 ```
-conda create -n seva python==3.9
+git clone https://github.com/Kevinz-code/SeVa.git
+cd SeVa
 ```
-Then in `seva' environment, install dependencies:
+Then create a conda environment and install packages
 ```
+conda create -n seva python==3.9 -y
 conda activate seva
 pip install torch==2.0.1 torchvision==0.15.2
 pip install -e .
