@@ -1,24 +1,18 @@
 MODEL_VERSION=llava_loraft_dpo_our_ocrvqa8kfilter_diffu500_textvqa8kfilter_diffu500_r1024_a2048
-MODEL_BASE=./checkpoints/llava-v1.5-7b
 
 OCR_DPO_DATA=data/step3/ocrvqa_dpo_8k_diffusion_step500.json
-OCRVQA_IMAGES=data/ocr_vqa/images/
-TEXTVQA_IMAGES=data/textvqa/train_images/
 TEXT_DPO_DATA=data/step3/textvqa_dpo_8k_diffusion_step500.json
-
-
-VISION_TOWER=./checkpoints/clip-vit-large-patch14-336
 
 deepspeed seva/train_dpo_ours.py \
     --lora_enable True --lora_r 1024 --lora_alpha 2048 --mm_projector_lr 0 \
     --deepspeed seva/scripts/zero3.json \
-    --model_name_or_path ${MODEL_BASE} \
+    --model_name_or_path checkpoints/llava-v1.5-7b \
     --version v1 \
     --ocr_data_path ${OCR_DPO_DATA} \
-    --ocr_image_path ${OCRVQA_IMAGES} \
+    --ocr_image_path data/ocr_vqa/images/ \
     --textvqa_data_path ${TEXT_DPO_DATA} \
-    --textvqa_image_path ${TEXTVQA_IMAGES} \
-    --vision_tower ${VISION_TOWER} \
+    --textvqa_image_path data/textvqa/train_images/ \
+    --vision_tower ./checkpoints/clip-vit-large-patch14-336 \
     --mm_projector_type mlp2x_gelu \
     --mm_vision_select_layer -2 \
     --mm_use_im_start_end False \
@@ -50,29 +44,3 @@ deepspeed seva/train_dpo_ours.py \
     --beta 0.1
 
 
-
-torchrun --nproc_per_node 8 --master_port 29500 seva/pope_eval.py \
-    --coco_path /data/hypertext/data/data/dataset/COCO/ \
-    --pope_path /data/hypertext/zhuk/HA-DPO/ha_dpo/data/POPE/ \
-    --model-path ./checkpoints/${MODEL_VERSION} \
-    --model-base ./checkpoints/llava-v1.5-7b \
-    --save_dir ./seva/pope_result/${MODEL_VERSION} \
-    --set random
-
-
-torchrun --nproc_per_node 8 --master_port 29500 seva/pope_eval.py \
-    --coco_path /data/hypertext/data/data/dataset/COCO/ \
-    --pope_path /data/hypertext/zhuk/HA-DPO/ha_dpo/data/POPE/ \
-    --model-path ./checkpoints/${MODEL_VERSION} \
-    --model-base ./checkpoints/llava-v1.5-7b \
-    --save_dir ./seva/pope_result/${MODEL_VERSION} \
-    --set popular
-
-
-torchrun --nproc_per_node 8 --master_port 29500 seva/pope_eval.py \
-    --coco_path /data/hypertext/data/data/dataset/COCO/ \
-    --pope_path /data/hypertext/zhuk/HA-DPO/ha_dpo/data/POPE/ \
-    --model-path ./checkpoints/${MODEL_VERSION} \
-    --model-base ./checkpoints/llava-v1.5-7b \
-    --save_dir ./seva/pope_result/${MODEL_VERSION} \
-    --set adv
