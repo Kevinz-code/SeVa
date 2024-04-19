@@ -79,7 +79,7 @@ sh run/llava1.5_lora_our_ocr8k_diffu800_text8k_diffu800.sh
 
 
 ## Evaluation
-Here we provide an evaluation on POPE benchmark, to help you test your training model with SeVa as quick as possible.
+Here we provide an evaluation on POPE benchmark, to help you get a quick evaluation of your models.
 
 For models trained with diffusion steps500 DPO data, run
 ```
