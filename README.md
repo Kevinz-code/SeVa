@@ -12,7 +12,7 @@ We make the first attempt towards **unsupervised preference alignment** in Large
 ## Contents
 - [Install](#Install)
 - [Dataset](#Data)
-- [SeVa pipeline](data/REAME.md)
+- [SeVa pipeline](data/README.md)
 - [Model](#Model)
 - [Training](#Training)
 - [Evaluation](#Evaluation)
