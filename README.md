@@ -11,8 +11,8 @@ We make the first attempt towards **unsupervised preference alignment** in Large
 
 ## Contents
 - [Install](#Install)
-- [Data](#Data)
-- [SeVa pipeline](data/README.md)
+- [Dataset](#Data)
+- [SeVa pipeline](#SeVa Pipeline)
 - [Model](#Model)
 - [Training](#Training)
 - [Evaluation](#Evaluation)
@@ -44,6 +44,8 @@ data/
 ```
 In which *texvqa* and *ocrvqa* are used for DPO data generation, *coco2014* are optionally required for quick evalutation in POPE benchmark.
 
+## SeVa
+We have included a **detailed** data construction pipeline in data/ folder
 
 ## Model
 | Version | Augmentation | LLM | Schedule | Checkpoint | LLaVA-Bench | MM-Vet | MMB | MMB-CN | POPE| SEED | SHR (↓) | SQA | GQA |
