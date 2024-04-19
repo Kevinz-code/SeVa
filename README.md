@@ -44,8 +44,15 @@ data/
 ```
 In which *texvqa* and *ocrvqa* are used for DPO data generation, *coco2014* are optionally required for quick evalutation in POPE benchmark.
 
-## SeVa
-We have included a **detailed** data construction pipeline in data/ folder
+## SeVa Pipeline
+We have included a **detailed** data construction pipeline in `data/' folder, with *step1*, *step2* and *step3*. Refer to [README](data/README.md)
+```
+data/
+|-- step1/
+|-- step2/
+|-- step3/
+|-- README.md
+```
 
 ## Model
 | Version | Augmentation | LLM | Schedule | Checkpoint | LLaVA-Bench | MM-Vet | MMB | MMB-CN | POPE| SEED | SHR (↓) | SQA | GQA |
