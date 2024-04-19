@@ -158,7 +158,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--model-path", type=str, default="facebook/opt-350m")
     parser.add_argument("--model-base", type=str, default=None)
-    parser.add_argument("--save_dir", type=str, default="./ha_dpo/models/llava-v1_5/pope_result/llava-1.5")
+    parser.add_argument("--save_dir", type=str, default="./seva/pope_result/")
     parser.add_argument("--load-8bit", action="store_true")
     parser.add_argument("--load-4bit", action="store_true")
     

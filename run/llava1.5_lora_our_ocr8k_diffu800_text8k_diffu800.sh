@@ -1,10 +1,10 @@
-MODEL_VERSION=llava_loraft_dpo_our_ocrvqa8kfilter_diffu500_textvqa8kfilter_diffu500_r1024_a2048
+MODEL_VERSION=llava_loraft_dpo_our_ocrvqa8kfilter_diffu800_textvqa8kfilter_diffu800_r1024_a2048
 MODEL_BASE=./checkpoints/llava-v1.5-7b
 
-OCR_DPO_DATA=data/step3/ocrvqa_dpo_8k_diffusion_step500.json
+OCR_DPO_DATA=data/step3/ocrvqa_dpo_8k_diffusion_step800.json
 OCRVQA_IMAGES=data/ocr_vqa/images/
 TEXTVQA_IMAGES=data/textvqa/train_images/
-TEXT_DPO_DATA=data/step3/textvqa_dpo_8k_diffusion_step500.json
+TEXT_DPO_DATA=data/step3/textvqa_dpo_8k_diffusion_step800.json
 
 
 VISION_TOWER=./checkpoints/clip-vit-large-patch14-336
@@ -51,7 +51,7 @@ deepspeed seva/train_dpo_ours.py \
 
 
 
-torchrun --nproc_per_node 8 --master_port 29500 seva/pope_eval.py \
+torchrun --nproc_per_node 8 --master_port 29501 seva/pope_eval.py \
     --coco_path /data/hypertext/data/data/dataset/COCO/ \
     --pope_path /data/hypertext/zhuk/HA-DPO/ha_dpo/data/POPE/ \
     --model-path ./checkpoints/${MODEL_VERSION} \
@@ -60,7 +60,7 @@ torchrun --nproc_per_node 8 --master_port 29500 seva/pope_eval.py \
     --set random
 
 
-torchrun --nproc_per_node 8 --master_port 29500 seva/pope_eval.py \
+torchrun --nproc_per_node 8 --master_port 29501 seva/pope_eval.py \
     --coco_path /data/hypertext/data/data/dataset/COCO/ \
     --pope_path /data/hypertext/zhuk/HA-DPO/ha_dpo/data/POPE/ \
     --model-path ./checkpoints/${MODEL_VERSION} \
@@ -69,7 +69,7 @@ torchrun --nproc_per_node 8 --master_port 29500 seva/pope_eval.py \
     --set popular
 
 
-torchrun --nproc_per_node 8 --master_port 29500 seva/pope_eval.py \
+torchrun --nproc_per_node 8 --master_port 29501 seva/pope_eval.py \
     --coco_path /data/hypertext/data/data/dataset/COCO/ \
     --pope_path /data/hypertext/zhuk/HA-DPO/ha_dpo/data/POPE/ \
     --model-path ./checkpoints/${MODEL_VERSION} \
