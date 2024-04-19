@@ -65,7 +65,7 @@ Below are three SeVa models using 3 different DPO data source (Diffusion-steps50
 
 
 ## Training
-The following command will conduct the training pipeline in 7b setting.
+You need to first download weights of [LLaVA-v1.5-7b](https://huggingface.co/liuhaotian/llava-v1.5-7b). 
 
 For running with DPO data sourced from Diffusion noise (*step=500*):
 ```
@@ -79,7 +79,18 @@ sh run/llava1.5_lora_our_ocr8k_diffu800_text8k_diffu800.sh
 
 
 ## Evaluation
-Refer to [LLaVa-1.5](https://github.com/haotian-liu/LLaVA/blob/main/docs/Evaluation.md).
+Here we provide an evaluation on POPE benchmark, to help you test your training model with SeVa as quick as possible.
+
+For models trained with diffusion steps500 DPO data, run
+```
+sh run/eval_pope_diffu500.sh
+```
+For models trained with diffusion steps800 DPO data, run
+```
+sh run/eval_pope_diffu800.sh
+```
+
+Refer to [LLaVa-1.5](https://github.com/haotian-liu/LLaVA/blob/main/docs/Evaluation.md) for a comprehension evaluation of multiple Benchmarks.
 
 ## Citation
 If you find our paper or codebase useful, please consider cite
