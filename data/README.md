@@ -15,7 +15,7 @@ python make_textvqa_data.py --data-num 8k
 ```
 which will obtain the 'ocrvqa_image_question_list_8k.json' and 'textvqa_image_question_list_8k.json' in step1/ folder.
 ### Step2: Generate augmented response
-In 'step2/' folder, generate choosen and rejected responses to ocrvqa image-question pairs. We recommand first choosing diffusion steps 500 for *your own data construction pipeline* since the results from steps500 are more stable across multiple runs, although our SeVa-7B DPO data generated from Diffusion steps 800 in our main experiment.
+In 'step2/' folder, generate choosen and rejected responses to ocrvqa image-question pairs. We recommand first choosing diffusion steps 500 for *your own data construction pipeline* since the results from steps 500 are more stable across multiple runs, although our SeVa-7B adopt DPO data from Diffusion steps 800.
 ```
 sh llava1.5_base_gen_ocrvqa8k.sh
 sh llava1.5_base_gen_ocrvqa8k_diffusion_step500.sh
