@@ -1,3 +1,7 @@
+The easiest way to obtain the DPO dataset constructed by SeVa is to download data from [kevinke/data](https://huggingface.co/kevinke/data)
+
+In the meanwhile, you can follow SeVa pipeline to generate arbitrary number of DPO data with Step1-Step3.
+
 ### Step1: acquire dataset
 First acquire all textvqa and ocrvqa dataset from llava665k
 ```
