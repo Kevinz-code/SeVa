@@ -45,9 +45,7 @@ data/
 |-- coco2014/
 |---- val2014/
 ```
-In which *texvqa* and *ocrvqa* are used for DPO data generation, *coco2014* are optionally required for quick evalutation in POPE benchmark. 
-
-You can download [textvqa](https://dl.fbaipublicfiles.com/textvqa/images/train_val_images.zip) and [coco2014](http://images.cocodataset.org/zips/val2014.zip) images in their official website. For ocrvqa images, download them using [ocrvqa scripts](https://drive.google.com/drive/folders/1_GYPY5UkUy7HIcR0zq3ZCFgeZN7BAfm_?usp=sharing) (following LLaVA).
+In which *texvqa* and *ocrvqa* are used for DPO data generation, *coco2014* are optionally required for quick evalutation in POPE benchmark. You can download [textvqa](https://dl.fbaipublicfiles.com/textvqa/images/train_val_images.zip) and [coco2014](http://images.cocodataset.org/zips/val2014.zip) images in their official website. For ocrvqa images, download them using [ocrvqa scripts](https://drive.google.com/drive/folders/1_GYPY5UkUy7HIcR0zq3ZCFgeZN7BAfm_?usp=sharing) (following LLaVA).
 
 ## SeVa Pipeline
 We have included a **detailed** data construction pipeline in `data/' folder, with *step1*, *step2* and *step3*. Refer to [README](data/README.md)
