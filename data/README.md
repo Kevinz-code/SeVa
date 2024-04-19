@@ -3,19 +3,19 @@ The easiest way to obtain the DPO dataset constructed by SeVa is to download dat
 In the meanwhile, you can follow SeVa pipeline to generate arbitrary number of DPO data with Step1-Step3.
 
 ### Step1: acquire dataset
-First acquire all textvqa and ocrvqa dataset from llava665k
+First acquire textvqa and ocrvqa split from [llava665k](https://huggingface.co/datasets/liuhaotian/LLaVA-Instruct-150K/blob/main/llava_v1_5_mix665k.json)
 ```
 cd step1
 python split_data.py
 ```
 Then we extract 8k image-question pairs of ocrvqa and textvqa, respectively.
 ```
-python make_ocrvqa_data.py
-python make_textvqa_data.py
+python make_ocrvqa_data.py --data-num 8k
+python make_textvqa_data.py --data-num 8k
 ```
-We will get the 'ocrvqa_image_question_list_8k.json' and 'textvqa_image_question_list_8k.json' in step1/ folder.
+which will obtain the 'ocrvqa_image_question_list_8k.json' and 'textvqa_image_question_list_8k.json' in step1/ folder.
 ### Step2: Generate augmented response
-In 'step2/' folder, generate choosen and rejected responses to ocrvqa image-question pairs:
+In 'step2/' folder, generate choosen and rejected responses to ocrvqa image-question pairs, the following example shows the generation with Diffusion steps 500. We recommand first choosing diffusion steps 500 for *your own data construction* since the results from steps500 are more stable across multiple runs, although our SeVa-7B DPO data generated from Diffusion steps 800 in our main experiment.
 ```
 sh llava1.5_base_gen_ocrvqa8k.sh
 sh llava1.5_base_gen_ocrvqa8k_diffusion_step500.sh
