@@ -19,7 +19,7 @@ We make the first attempt towards **unsupervised preference alignment** in Large
 
 
 ## Install
-First, clone this repo by:
+First, clone this repo and navigate to SeVa folder:
 ```
 git clone https://github.com/Kevinz-code/SeVa.git
 cd SeVa
