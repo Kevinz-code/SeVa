@@ -6,7 +6,7 @@ We make the first attempt towards **unsupervised preference alignment** in Large
 
 ![method](seva/utils/method.png) 
 
-
+This package is developed by Ke Zhu (http://www.lamda.nju.edu.cn/zhuk/) and is free for academic usage. You can run it at your own risk. For other purposes, please contact Xiangyu Zhang (mail to zhangxiangyu@megvii.com).
 
 
 ## Contents
