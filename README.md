@@ -11,10 +11,11 @@ We make the first attempt towards **unsupervised preference alignment** in Large
 
 ## Contents
 - [Install](#Install)
-- [Model Zoo](https://huggingface.co/kevinke/)
+- [Data](#Data)
 - [SeVa pipeline](data/README.md)
-- [DPO Data](https://huggingface.co/kevinke/data/)
+- [Model](#Model)
 - [Training](#Training)
+- [Evaluation](#Evaluation)
 
 
 ## Install
@@ -27,6 +28,21 @@ conda activate seva
 pip install torch==2.0.1 torchvision==0.15.2
 pip install -e .
 ```
+
+## Dataset
+We expect the **image dataset** to have the following structure:
+```
+data/
+|-- texvqa/
+|---- train_images/
+......
+|-- ocrvqa/
+|---- images/
+......
+|-- coco2014/
+|---- val2014/
+```
+In which *texvqa* and *ocrvqa* are used for DPO data generation, *coco2014* are optionally required for quick evalutation in POPE benchmark.
 
 
 ## Model
