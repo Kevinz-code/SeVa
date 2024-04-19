@@ -36,7 +36,7 @@ pip install -e .
 | SeVa-7B | Diffusion800 | Vicuna-7B | lora_ft | [kevinke/seva-7b-diffu800](https://huggingface.co/kevinke/seva-7b-diffu800) | 72.2 | 37.2 | 65.6 | 59.2 | 86.7 | 65.8 | 34.9 | 67.5 | 60.7 |
 | SeVa-7B | MOCO        | Vicuna-7B | lora_ft | [kevinke/seva-7b-moco](https://huggingface.co/kevinke/seva-7b-moco)      | 72.5 | 37.0 | 65.2 | 59.8 | 86.6 | 65.5 | 32.9 | 67.1 | 60.9| 
 
-Below are three SeVa models using 3 different DPO data source (Diffusion-steps500, Diffusion-steps800 and MOCO augmentaions).
+Below are three SeVa models using 3 different DPO data source (Diffusion-steps500, Diffusion-steps800 and MOCO augmentaions). Standard deviation exists in somebenchmarks (e.g., MM-Vet and LLaVA-Bench).
 
 
 ## Training
