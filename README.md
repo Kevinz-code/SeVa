@@ -92,7 +92,7 @@ For models trained with diffusion steps800 DPO data, run
 ```
 sh run/eval_pope_diffu800.sh
 ```
-**note: our evaluation are based on llava1.1.x version.**
+**note: our evaluation are based on llava1.1.x version of its code repository**
 
 Refer to [LLaVa-1.5](https://github.com/haotian-liu/LLaVA/blob/main/docs/Evaluation.md) for a comprehension evaluation of multiple Benchmarks.
 
