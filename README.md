@@ -1,4 +1,5 @@
 # :rabbit2:	Self-Supervised Visual Preference Alignment
+### Accepted by MM2024 (oral presentation)!
 We make the first attempt towards **unsupervised preference alignment** in Large Vision-Language Models.
 
 *The whole pipeline do not need any GPT-4 or humman annotated labels in preference alignment*. [Paper](https://arxiv.org/abs/2404.10501)
